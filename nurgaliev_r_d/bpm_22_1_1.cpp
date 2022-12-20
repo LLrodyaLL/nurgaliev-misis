@@ -9,12 +9,12 @@ int main() {
 	float summa = 0;
 	int i = 1;
 
-	std::cout << "x" << "    " << "summa" << std::endl;
+	std::cout << "x" << "      " << "summa" << std::endl;
 
 	for (float x = x_start; x <= x_end; x += step) {
 		float temp = 1;
 		while (std::abs(temp) >= eps) {
-			temp = std::pow(x, (2 * i + 1)) * std::pow(-1, (i + 1)) / (4 * std::pow(i, 2) - 1);
+			temp = std::pow(x, 2 * i + 1) * std::pow(-1, i + 1) / (4 * std::pow(i, 2) - 1);
 			summa += temp;
 			i++;
 		}
